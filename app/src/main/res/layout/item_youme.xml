@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="3dp"
+    android:background="@drawable/item_shape"
+    android:layout_margin="8dp"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:id="@+id/board_item_warp"
+        android:padding="18dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_boardnum"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="새 가족이 된 우리 아이"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_nic"
+            android:text="간공장장"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_alignParentRight="true"
+            android:layout_alignBaseline="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:hint="앞으로는 같이 행복하자"
+            android:layout_marginTop="10dp"
+            android:textSize="13sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:layout_below="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_cnt"
+            android:layout_marginRight="5dp"
+            android:text="@string/view_cnt"
+            android:textSize="13sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_content"
+            android:textColor="@color/main_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_view_cnt"
+            android:textSize="13sp"
+            android:hint="0"
+            android:layout_alignBaseline="@+id/tv_cnt"
+            android:layout_toRightOf="@+id/tv_cnt"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_content"
+            android:textColor="@color/main_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:textSize="13sp"
+            android:hint="2023-03-01 13:25"
+            android:layout_marginTop="10dp"
+            android:layout_alignBaseline="@+id/tv_cnt"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_content"
+            android:textColor="@color/main_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

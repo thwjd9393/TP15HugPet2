@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/grid_btn"
+                android:src="@drawable/list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--        <ImageView-->
+            <!--            android:id="@+id/find_btn"-->
+            <!--            android:layout_alignParentRight="true"-->
+            <!--            android:layout_alignTop="@+id/grid_btn"-->
+            <!--            android:layout_alignBottom="@+id/grid_btn"-->
+            <!--            android:src="@drawable/ic_find"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"/>-->
+
+            <Spinner
+                android:id="@+id/spinner_select"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/grid_btn"
+                android:layout_alignBottom="@+id/grid_btn"
+                android:entries="@array/pet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyview"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/grid_btn"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/top_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:backgroundTint="@color/main_color"
+        android:src="@drawable/ic_up"
+        app:tint="@color/white"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

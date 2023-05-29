@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="3dp"
+    android:background="@drawable/item_shape"
+    android:layout_height="200dp"
+    android:layout_margin="8dp">
+
+    <RelativeLayout
+        android:id="@+id/rcyview_to_detail"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:id="@+id/popfile"
+            android:scaleType="centerCrop"
+            android:src="@drawable/testimg"
+            android:layout_width="match_parent"
+            android:layout_height="113dp"/>
+
+        <RelativeLayout
+            android:padding="8dp"
+            android:layout_below="@+id/popfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/desertionNo"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/petKind"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/kindCd"
+                android:hint="[개] 믹스견 "
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:maxEms="8"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/sexCd"
+                android:src="@drawable/female"
+                android:layout_alignTop="@+id/kindCd"
+                android:layout_alignBottom="@+id/kindCd"
+                android:layout_toRightOf="@+id/kindCd"
+                android:layout_width="17dp"
+                android:layout_height="17dp"/>
+
+            <TextView
+                android:id="@+id/noticeNo"
+                android:text="충남-공주-2022-00001"
+                android:textSize="13sp"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/kindCd"
+                android:textColor="@color/main_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/processState"
+                android:src="@drawable/status_ok"
+                android:layout_below="@+id/noticeNo"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
