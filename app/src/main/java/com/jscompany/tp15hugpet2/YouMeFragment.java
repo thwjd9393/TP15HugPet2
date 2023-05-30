@@ -71,7 +71,7 @@ public class YouMeFragment extends Fragment {
                 Log.i("TAG", "youMeItems :"+ youMeItems.size());
 
                 for(int i=0; i < youMeItems.size(); i++) {
-                    items.add(new YouMeItem(youMeItems.get(i).bNo,youMeItems.get(i).title,youMeItems.get(i).content,youMeItems.get(i).nicName,youMeItems.get(i).viewCnt,youMeItems.get(i).userNo,youMeItems.get(i).date));
+                    items.add(new YouMeItem(youMeItems.get(i).bNo,youMeItems.get(i).title,youMeItems.get(i).content,youMeItems.get(i).userNic,youMeItems.get(i).viewCnt,youMeItems.get(i).userNo,youMeItems.get(i).date));
                 }
 
                 adapter = new YouMeAdapter(requireActivity(),items);

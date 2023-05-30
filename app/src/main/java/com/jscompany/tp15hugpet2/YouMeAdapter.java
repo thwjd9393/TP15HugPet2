@@ -49,7 +49,7 @@ public class YouMeAdapter extends RecyclerView.Adapter<YouMeAdapter.VH> {
         holder.tv_content.setText(item.content);
 
         holder.tv_date.setText(item.date);
-        holder.tv_nic.setText(item.nicName);
+        holder.tv_nic.setText(item.userNic);
         holder.tv_view_cnt.setText(item.viewCnt);
 
     }

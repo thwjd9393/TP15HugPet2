@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -55,7 +56,7 @@ public class YouMeDetail extends AppCompatActivity {
     }
 
     private void data() {
-        
+
         //디테일 페이지
         Intent intent = getIntent();
         int bNo = intent.getIntExtra("boardN",0);
@@ -69,10 +70,13 @@ public class YouMeDetail extends AppCompatActivity {
 
                 List<YouMeItem> items = response.body();
 
+                Log.i("TAG", "items?"+items.get(0).userNic);
+                Log.i("TAG", "items?"+items.get(0).userNo);
+
                 boardnum.setText(items.get(0).bNo + "");
                 title.setText(items.get(0).title);
                 content.setText(items.get(0).content);
-                nicName.setText(items.get(0).nicName);
+                nicName.setText(items.get(0).userNic);
                 viewCnt.setText(items.get(0).viewCnt);
                 date.setText(items.get(0).date);
 
@@ -83,7 +87,7 @@ public class YouMeDetail extends AppCompatActivity {
                 Toast.makeText(YouMeDetail.this, "네트워크 문제", Toast.LENGTH_SHORT).show();
             }
         });
-        
+
     }
 
 //    void data(){
